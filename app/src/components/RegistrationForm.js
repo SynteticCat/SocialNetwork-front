@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/RegistrationForm.css';
+import axios from 'axios';
 
 class RegistrationForm extends React.Component {
     constructor(props) {
@@ -18,6 +19,17 @@ class RegistrationForm extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log("email: " + this.state.email, "password: " + this.state.password);
+        axios.post('http://localhost:3001/signup', {
+            login: this.state.login,
+            email: this.state.email,
+            pass: this.state.password
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     handleLoginChange(event) {
@@ -56,6 +68,7 @@ class RegistrationForm extends React.Component {
                     value={this.state.password}
                     onChange={this.handlePasswordChange}
                 />
+                <input type="submit"/>
             </div>
             </form>
             </div>

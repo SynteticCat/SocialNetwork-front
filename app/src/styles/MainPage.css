@@ -1,0 +1,21 @@
+.mainPageWrap {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+.testWrap {
+    width: 315px;
+}
+
+.back {
+    width: 300px;
+    font-size: 20px;
+    padding: 3px;
+    margin: 3px;
+}

@@ -41,7 +41,7 @@ class AuthorizationPage extends React.Component {
 
     handleEmailChange(event) {
         this.setState({email: event.target.value});
-        console.log("email: " + this.state.email);
+        setTimeout(() => console.log("email: " + this.state.email) ,100);
     }
 
     handlePasswordChange(event) {

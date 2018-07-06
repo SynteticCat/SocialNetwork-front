@@ -1,6 +1,7 @@
 import React from 'react';
-import '../styles/RegistrationPage.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
+import '../styles/RegistrationPage.css';
 
 class RegistrationPage extends React.Component {
     constructor(props) {
@@ -21,14 +22,13 @@ class RegistrationPage extends React.Component {
 
     sendDataToServer(response) {
         console.log(response);
-        return response;
     }
 
     redirectToAuthorizationPage(response) {
         console.log(window.location);
         // window.location = ''; how correctly get a new url to AuthorizationPage.js
-        //window.assign("app/src/components/RegistrationPage.js");
-        //console.log(window.location);
+        // window.assign("app/src/components/RegistrationPage.js");
+        // console.log(window.location);
         // router!!!!!!!!! i know
     }
 
@@ -42,7 +42,7 @@ class RegistrationPage extends React.Component {
         })
             .then(this.sendDataToServer)
             .then(this.redirectToAuthorizationPage)
-            .catch(error => console.error(error))
+            .catch(error => console.error(error))   //TODO: foo
     }
 
     handleLoginChange(event) {

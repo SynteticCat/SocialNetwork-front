@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import LinkButton from './LinkButton';
 import '../styles/AuthorizationPage.css';
 
 class AuthorizationPage extends React.Component {
@@ -65,7 +67,20 @@ class AuthorizationPage extends React.Component {
                             value={this.state.pass}
                             onChange={this.handlePasswordChange}
                         />
-                        <input type="submit"/>
+                        <LinkButton
+                            className="auth"
+                            to='/main'
+                            onClick={(event) => {
+                                console.log('custom event here!', event)
+                            }}
+                        >Sign in</LinkButton>
+                        <LinkButton
+                            className="back"
+                            to='/signup'
+                            onClick={(event) => {
+                                console.log('custom event here!', event)
+                            }}
+                        >Back</LinkButton>
                     </div>
                 </form>
             </div>

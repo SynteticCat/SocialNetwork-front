@@ -12,7 +12,9 @@
     width: 315px;
 }
 
-.formsWrap input {
+.formsWrap input,
+.formsWrap .auth,
+.formsWrap .back {
     width: 300px;
     font-size: 20px;
     padding: 3px;

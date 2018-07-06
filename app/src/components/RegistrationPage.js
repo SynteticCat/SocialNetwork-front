@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import LinkButton from './LinkButton';
 import '../styles/RegistrationPage.css';
 
 class RegistrationPage extends React.Component {
@@ -81,7 +81,13 @@ class RegistrationPage extends React.Component {
                             value={this.state.pass}
                             onChange={this.handlePasswordChange}
                         />
-                        <input type="submit"/>
+                        <LinkButton
+                            className="reg"
+                            to='/signin'
+                            onClick={(event) => {
+                                console.log('custom event here!', event)
+                            }}
+                        >Sign up</LinkButton>
                     </div>
                 </form>
             </div>
